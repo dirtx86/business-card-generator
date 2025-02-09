@@ -49,13 +49,13 @@ class BaseCard:
 
     def qrcode_svg(self, scale: float = 4.0) -> BytesIO:
         image = BytesIO()
-        self.qrcode.save(image, kind="svg", scale=scale, svgclass=self.name, data_dark="#008eb2")
+        self.qrcode.save(image, kind="svg", scale=scale, svgclass=self.name, data_dark="#008eb2", dark="#008eb2")
         image.seek(0)
         return image
 
     def qrcode_png(self, scale: float = 4.0) -> BytesIO:
         image = BytesIO()
-        self.qrcode.save(image, kind="png", scale=scale,  data_dark="#008eb2")
+        self.qrcode.save(image, kind="png", scale=scale,  data_dark="#008eb2", dark="#008eb2")
         image.seek(0)
         return image
 
